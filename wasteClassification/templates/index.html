@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waste Classifier</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename= 'css/index.css')}}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <div class="header_brand">Waste Classifier</div>
+        <div class="header_navigation">
+          <div class="header_navigation_tab selected">Home</div>
+          <!-- <div class="header_navigation_tab" onclick="window.location.replace('/about.html')">About</div> -->
+          <div
+            class="header_navigation_tab"
+            onclick="window.location.replace('/classify')"
+          >
+            Classify
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="content">
+        <div class="content_left">
+          <div class="content_left_title">
+            About
+          </div>
+          <div class="content_left_description">
+            On a daily basis, the country produces more than 1.50 lakh metric tonne (MT) of solid waste, according to a 2019 India Today report.
+             With almost 15,000 MT of garbage remaining exposed every day, it has become a significant reason for rising pollution levels. 
+             Careful and robust classification of waste materials is important given the strict controls required for storage, treatment and disposal of hazardous waste.
+             It is also important to ensure that wastes are disposed of in the correct landfill sites. 
+             This website helps in classifying your waste into 9 different categories: Batteries, Clothes, E-Waste, Glass, Light bulbs, Metal, Organic, Paper and Plastic. 
+             This will help in bringing awareness about the criticality of this issue to people.
+  
+          </div>
+          <button
+            class="content_left_button"
+            onclick="window.location.replace('/classify')"
+          >
+            Classify Image
+          </button>
+          <!-- <button class="content_left_button1" onclick="window.location.replace('/about.html')">Learn More</button> -->
+        </div>
+        <div class="content_right">
+          <img
+            src="{{ url_for('static',filename= 'images/home_page.svg')}}"
+            alt="Garbage Truck"
+            class="content_right_img"
+          />
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer"></div>
+    </div>
+  </body>
+</html>

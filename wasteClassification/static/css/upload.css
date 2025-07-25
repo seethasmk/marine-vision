@@ -1,0 +1,40 @@
+.container1 {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.ccontent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: block;
+}
+
+.ccontent_title {
+    font-size: calc(2vh + 2vw);
+    font-weight: 900;
+    color: #00A3FE;
+}
+.ccontent_img {
+    width: 30%;
+    margin: 5vh 0;
+    opacity: 0.75;
+    cursor: pointer;
+}
+.ccontent_button {
+    font-family: 'Roboto', sans-serif;
+    border: 0;
+    color: #fff;
+    padding: 3% 7.5%;
+    font-size: calc(1vw + 1vh);
+    font-weight: 500;
+    border-radius: 0;
+    background-color: #00A3FE;
+    cursor: pointer;
+    margin-top: 2vh;
+}
+#image{
+    display: none;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waste Classifier</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename= 'css/index.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename= 'css/result.css')}}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <div class="header_brand">Waste Classifier</div>
+        <div class="header_navigation">
+          <div
+            class="header_navigation_tab"
+            onclick="window.location.replace('/')"
+          >
+            Home
+          </div>
+          <!-- <div class="header_navigation_tab" onclick="window.location.replace('/about.html')">About</div> -->
+          <div
+            class="header_navigation_tab selected"
+            onclick="window.location.replace('/classify')"
+          >
+            Classify
+          </div>
+        </div>
+      </div>
+
+      <!-- Classification Result -->
+      <div class="result">
+        <div class="result_dustbin_box">
+          <img
+            src="{{ url_for('static',filename= 'images/' + data['image'] + '.svg')}}"
+            alt="Dustbin"
+            class="result_dustbin_img"
+          />
+        </div>
+        <div class="result_comment">{{ data["material"] }} Material</div>
+        <div class="result_about">
+          <div class="result_about_title">{{ data["material"] }}</div>
+          <div class="result_about_text">{{ data["about"] }}</div>
+        </div>
+        <div style="text-align: center">
+          <button
+            class="result_btn"
+            onclick="window.location.replace('/classify')"
+          >
+            Classify another Image
+          </button>
+          <button class="result_btn1" onclick="window.location.replace('/')">
+            Go to Home Page
+          </button>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer"></div>
+    </div>
+  </body>
+</html>
